@@ -1,0 +1,41 @@
+.p-related {
+  margin-bottom: 100px;
+  &__list {
+    position: relative;
+  }
+  &__item {
+    list-style: none;
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 8px;
+      background-size: cover;
+      background-color: #92c6f2;
+      color: #fafafa;
+      font-weight: normal;
+      font-family: 'Open Sans', sans-serif;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        transition: 0.1s;
+      }
+      &:hover {
+        &::before {
+          background: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+    span {
+      position: relative;
+    }
+  }
+}

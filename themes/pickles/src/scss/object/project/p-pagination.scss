@@ -1,0 +1,11 @@
+@use "../../foundation/variable/breakpoint.scss" as breakpoint;
+
+.p-pagination {
+  margin: 30px 0;
+  @include breakpoint.mq-up(sm) {
+    margin: 60px 0;
+  }
+  &__count {
+    margin-top: 24px;
+  }
+}
