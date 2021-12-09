@@ -1,0 +1,36 @@
+{{- $showdate := default (default false $.Site.Params.showMetaDates) .Params.showmetadates }}
+{{- $showlink := default (default false $.Site.Params.showMetaLinks) .Params.showmetalinks }}
+{{- if or $showdate $showlink }}
+<div class="post-meta">
+  {{- if $showdate }}
+  <span>Date</span> &#x5b;
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ .Date.Format (default "02 Jan 06 15:04 MST" .Site.Params.dateFmt) }}
+    </time>
+  &#x5d;
+    {{- if ne .Date .Lastmod }}
+  <span>Last modified</span> &#x5b;
+    <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ .Lastmod.Format (default "02 Jan 06 15:04 MST" .Site.Params.dateFmt) }}
+    </time>
+  &#x5d;
+    {{- end }}
+  {{- end }}
+  {{- if $showlink }}
+    {{- $fallback := slice (dict "Identifier" "Categories") (dict "Identifier" "Series") (dict "Identifier" "Tags") }}
+    {{- range default $fallback .Site.Menus.meta }}
+      {{- $taxo := $.Param .Identifier }}
+      {{- if $taxo }}
+        {{ $name := default .Identifier .Name }}
+        {{ $link := default .Identifier .URL }}
+  <span{{ if .Title }} title="{{ .Title }}"{{ end }}>{{ $name }}</span> &#x5b;
+        {{- range $taxo }}
+          {{- $perma := lower (path.Join $link (urlize .)) }}
+    <a href="{{ $perma | relURL }}">{{ . }}</a>
+        {{- end }}
+  &#x5d;
+      {{- end }}
+    {{- end }}
+  {{- end }}
+</div>
+{{- end }}

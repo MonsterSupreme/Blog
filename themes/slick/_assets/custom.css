@@ -1,0 +1,188 @@
+
+/* color definitions *********************************************************/
+/* https://github.com/chriskempson/tomorrow-theme
+
+    background:     #ffffff;   **
+    current-line:   #efefef;   **
+    selection:      #d6d6d6;   **
+    foreground:     #4d4d4c;   **
+    comment:        #8e908c;   **
+    red:            #c82829;
+    orange:         #f5871f;
+    yellow:         #eab700;   **
+    green:          #718c00;
+    aqua:           #3e999f;   **
+    blue:           #4271ae;   **
+    purple:         #8959a8;   **
+*/
+
+/* basic elements ************************************************************/
+
+body {
+    background-color: #ffffff;
+    color: #4d4d4c;
+    font-display: swap;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+abbr, cite, q { font-family: "Source Serif Pro", serif; }
+cite, q, em { font-style: italic; }
+
+
+bold, b, dt, strong { font-weight: bold; }
+
+
+kbd, samp {
+    background-color: #efefef;
+    padding: 0 .125em;
+}
+code, kbd, pre, samp {
+    border: 0;
+    border-radius: .25em;
+    font-family: "Source Code Pro", monospace;
+    margin: 0;
+}
+pre code {
+    display: block;
+    padding: .25em;
+    tab-size: 4;
+}
+.highlight {
+    overflow: auto;
+}
+
+mark { background-color: #eab700; }
+
+
+blockquote {
+    border-left: .5em solid #8e908c;
+    border-radius: .25em;
+    margin-left: 0;
+    padding-left: 2em;
+}
+
+
+a { color: #4271ae; }
+a:hover, a:hover:visited { color: #3e999f; }
+a:visited { color: #8959a8; }
+
+
+hr {
+    border: 0;
+    border-top: 1px dashed #4d4d4c;
+}
+
+
+::selection { background-color: #d6d6d6; }
+
+
+/* pure adjustments **********************************************************/
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    color: #4d4d4c;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+}
+
+.pure-table {
+    background-color: #ffffff;
+    border: 1px solid #8e908c;
+    color: #4d4d4c;
+}
+.pure-table td, .pure-table th {
+    border-left: 1px solid #8e908c;
+}
+
+.pure-table thead {
+    background-color: #efefef;
+    color: #4d4d4c;
+}
+
+.pure-menu a,
+.pure-menu a:hover,
+.pure-menu a:hover:visited,
+.pure-menu a:visited {
+    color: #4d4d4c;
+}
+
+.pure-menu-item:hover,
+.pure-menu-header:hover {
+    background-color: #efefef;
+}
+
+.pure-menu-disabled:hover { background-color: transparent; }
+
+/* page style ****************************************************************/
+
+.footer {
+    border-top: 1px solid #4d4d4c;
+}
+.navigation {
+    border-bottom: 1px solid #4d4d4c;
+}
+
+.navigation-header {
+    font-size: 1.25em;
+}
+.navigation-header a {
+    color: #4d4d4c;
+}
+.navigation-header-subtitle {
+    font-family: "Source Serif Pro", serif;
+}
+
+.navigation-content,
+.pagination-content,
+.footer {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+figure { text-align: center; }
+figure img { margin: 0 auto; }
+
+
+h1, h2, h3, h4, h5, h6, .post-title {
+    font-family: "Source Serif Pro", serif;
+    font-weight: bold;
+}
+.post-title {
+    margin-bottom: 0;
+}
+
+.post-meta {
+    font-size: .9em;
+    margin: 0 0 .5em;
+}
+.post-meta a { text-decoration: none; }
+.post-meta a:hover{ text-decoration: underline; }
+
+.post-divider { border-top: 1px solid #4d4d4c; }
+
+code .ln { margin-right: .5em; }
+
+/* helpers *******************************************************************/
+
+.pull-end { float: right; }
+[dir="rtl"] .pull-end { float: left; }
+.pull-start { float: left; }
+[dir="rtl"] pull-start { float: right; }
+
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.fix-cursor-pointer { cursor: pointer; }
+.fix-placement-up {
+    position: relative;
+    top: -.05em;
+}

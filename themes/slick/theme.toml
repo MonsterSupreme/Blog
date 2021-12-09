@@ -1,0 +1,18 @@
+name = "Slick"
+license = "MIT"
+licenselink = "http://opensource.org/licenses/MIT"
+description = "A Hugo theme focused on content, cleanliness, speed, responsiveness and privacy"
+homepage = "https://github.com/spookey/slick"
+demosite = "https://slick.toor.su"
+tags = ["blog", "personal", "responsive", "mobile", "minimal", "clean", "light", "high contrast", "typography"]
+features = ["responsive", "black-and-white", "fulltext rss feed"]
+min_version = "0.60.0"
+
+[author]
+    name = "Frieder Grießhammer"
+    homepage = "https://www.der-beweis.de"
+
+[original]
+    name = "Temple"
+    homepage = "http://aos.github.io"
+    repo = "https://github.com/aos/temple"

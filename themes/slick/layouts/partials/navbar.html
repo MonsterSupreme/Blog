@@ -1,0 +1,38 @@
+{{- $showhead := default true .Site.Params.showNavHeader }}
+{{- if or $showhead .Site.Menus.main }}
+<div class="navigation">
+  {{- if $showhead }}
+  <div class="navigation-header clearfix">
+    <div class="pure-menu pure-menu-horizontal">
+      {{- with .Site.Title }}
+      <a class="pure-menu-heading pure-menu-link" href="{{ $.Site.Home.RelPermalink }}">
+        {{ . }}
+      </a>
+      {{- end }}
+      {{- with .Site.Params.subtitle }}
+      <ul class="pure-menu-list navigation-header-subtitle pull-end">
+        <li class="pure-menu-item pure-menu-disabled">
+          <span class="pure-menu-link">{{ . }}</span>
+        </li>
+      </ul>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+  {{- if .Site.Menus.main }}
+  <div class="navigation-content">
+    <div class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        {{- $curr := . }}
+        {{- range .Site.Menus.main }}
+        {{- $selected := cond (or ($curr.IsMenuCurrent "main" .) ($curr.HasMenuCurrent "main" .)) " pure-menu-selected" "" }}
+        <li class="pure-menu-item{{ $selected }}"{{ if .Title }} title="{{ .Title }}"{{ end }}>
+          <a  class="pure-menu-link" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
