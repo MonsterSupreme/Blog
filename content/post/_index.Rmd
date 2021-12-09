@@ -1,5 +1,6 @@
 ---
 title : "Posts"
+url: "/"
 menu : "main"
 weight : "10"
 ---
