@@ -1,11 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Categories on A Hugo website</title>
-		<link>/categories/</link>
-		<description>Recent content in Categories on </description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-	</channel>
+ <channel>
+   <title>Categories on A Hugo website</title>
+   <link>/categories/</link>
+   <description>Recent content in Categories on A Hugo website</description>
+   <generator>Hugo -- gohugo.io</generator>
+   <language>en-us</language>
+   
+       <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+   
+   
+     <item>
+       <title>A Plain Markdown Post</title>
+       <link>/2016/12/30/a-plain-markdown-post/</link>
+       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
+       
+       <guid>/2016/12/30/a-plain-markdown-post/</guid>
+       <description>&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown (&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (&lt;code&gt;```{r}&lt;/code&gt;);&lt;/li&gt;&lt;li&gt;A plain Markdown post is rendered through &lt;a href=&#34;https://gohugo.io/overview/configuration/&#34;&gt;Blackfriday&lt;/a&gt;, and an R Markdown document is compiled by &lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;&lt;strong&gt;rmarkdown&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;http://pandoc.org&#34;&gt;Pandoc&lt;/a&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;There are many differences in syntax between Blackfriday&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write an R package.&lt;/li&gt;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write a book.&lt;/li&gt;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &amp;hellip;&lt;/li&gt;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Profit!&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Similarly, Blackfriday does not support LaTeX math and Pandoc does. I have added the MathJax support to this theme (&lt;a href=&#34;https://github.com/yihui/hugo-lithium&#34;&gt;hugo-lithium&lt;/a&gt;) but there is a caveat for plain Markdown posts: you have to include math expressions in a pair of backticks (inline: &lt;code&gt;`$ $`&lt;/code&gt;; display style: &lt;code&gt;`$$ $$`&lt;/code&gt;), e.g., &lt;code&gt;$S_n = \sum_{i=1}^n X_i$&lt;/code&gt;.^[This is because we have to protect the math expressions from being interpreted as Markdown. You may not need the backticks if your math expression does not contain any special Markdown syntax such as underscores or asterisks, but it is always a safer choice to use backticks. When you happen to have a pair of literal dollar signs inside the same element, you can escape one dollar sign, e.g., &lt;code&gt;\$50 and $100&lt;/code&gt; renders &amp;ldquo;$50 and $100&amp;rdquo;.] For R Markdown posts, you do not need the backticks, because Pandoc can identify and process math expressions.&lt;/p&gt;&lt;p&gt;When creating a new post, you have to decide whether the post format is Markdown or R Markdown, and this can be done via the &lt;code&gt;ext&lt;/code&gt; argument of the function &lt;code&gt;blogdown::new_post()&lt;/code&gt;, e.g.&lt;/p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;blogdown&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;new_post&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Post Title&amp;#34;&lt;/span&gt;, ext &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.Rmd&amp;#39;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+     </item>
+   
+     <item>
+       <title>Lorem Ipsum</title>
+       <link>/2015/01/01/lorem-ipsum/</link>
+       <pubDate>Thu, 01 Jan 2015 13:09:13 -0600</pubDate>
+       
+       <guid>/2015/01/01/lorem-ipsum/</guid>
+       <description>&lt;p&gt;&lt;strong&gt;Lorem ipsum&lt;/strong&gt; dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore &lt;em&gt;magna aliqua&lt;/em&gt;. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+     </item>
+   
+ </channel>
 </rss>
