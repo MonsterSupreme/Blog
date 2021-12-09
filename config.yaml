@@ -1,7 +1,7 @@
 baseurl: /
 languageCode: en-us
 title: A Hugo website
-theme: pickles
+theme: vitae
 googleAnalytics: ''
 disqusShortname: ''
 ignoreFiles:
