@@ -1,7 +1,7 @@
 baseurl: /
 languageCode: en-us
 title: A Hugo website
-theme: kiera
+theme: hugo-kiera
 googleAnalytics: ''
 disqusShortname: ''
 ignoreFiles:
